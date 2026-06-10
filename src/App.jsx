@@ -419,7 +419,7 @@ export default function Home() {
             </div>
 
             <input
-  type="number"
+  type="text"
   inputMode="decimal"
   placeholder=""
   value={displayAmount}
