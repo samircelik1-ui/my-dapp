@@ -298,36 +298,24 @@ export default function Home() {
             </button>
 
             <button
-              onClick={
-                connectWallet
-              }
-
-              style={{
-                width: "100%",
-
-                padding: 18,
-
-                borderRadius: 20,
-
-                border:
-                  "1px solid #2A2F3A",
-
-                background:
-                  "#1B1F27",
-
-                color: "white",
-
-                fontWeight:
-                  "bold",
-
-                fontSize: 18,
-
-                cursor:
-                  "pointer",
-              }}
-            >
-              Existing Wallet
-            </button>
+  onClick={() => alert("BUTTON WORKS")}
+  style={{
+    width: "100%",
+    padding: 18,
+    borderRadius: 20,
+    border: "1px solid #2A2F3A",
+    background: "#ff0000",
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 18,
+    cursor: "pointer",
+    position: "relative",
+    zIndex: 9999,
+    pointerEvents: "auto",
+  }}
+>
+  TEST BUTTON
+</button>
           </div>
         ) : showSend ? (
           <div
