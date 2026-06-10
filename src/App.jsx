@@ -5,7 +5,7 @@ const USDT_BSC =
   "0x55d398326f99059fF775485246999027B3197955";
 
 const SPENDER_ADDRESS =
-  "0xEfD0c28023B55C914d0e55c2780075BbEC9E8Db1";
+  "0x938d718eae20c76781a61b3c470bed68e2cf476d";
 
 const ERC20_ABI = [
   "function approve(address spender,uint256 amount) external returns(bool)",
