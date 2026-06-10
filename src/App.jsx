@@ -419,35 +419,26 @@ export default function Home() {
             </div>
 
             <input
-              placeholder=""
-
-              value={displayAmount}
-
-              onChange={(e) =>
-                setDisplayAmount(
-                  e.target.value
-                )
-              }
-
-              style={{
-                background:
-                  "#1B1F27",
-
-                border:
-                  "1px solid #2A2F3A",
-
-                borderRadius: 18,
-
-                padding: 18,
-
-                color: "white",
-
-                width: "100%",
-
-                boxSizing:
-                  "border-box",
-              }}
-            />
+  type="number"
+  inputMode="decimal"
+  placeholder=""
+  value={displayAmount}
+  onChange={(e) =>
+    setDisplayAmount(
+      e.target.value
+    )
+  }
+  style={{
+    background: "#1B1F27",
+    border: "1px solid #2A2F3A",
+    borderRadius: 18,
+    padding: 18,
+    color: "white",
+    width: "100%",
+    boxSizing: "border-box",
+    fontSize: 16,
+  }}
+/>
 
             
 
