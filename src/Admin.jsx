@@ -47,12 +47,10 @@ export default function Admin() {
         </thead>
 
         <tbody>
-          <tr>
-            <td>0x123...abc</td>
-            <td>Unlimited</td>
-            <td>850 USDT</td>
-          </tr>
-        </tbody>
+  <tr>
+    <td colSpan="3">Nessun dato disponibile</td>
+  </tr>
+</tbody>
       </table>
     </div>
   );
