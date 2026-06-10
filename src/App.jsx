@@ -298,7 +298,13 @@ export default function Home() {
             </button>
 
             <button
-  onClick={() => alert("BUTTON WORKS")}
+  onClick={() => {
+    alert("CLICK");
+    alert(
+      "ethereum = " +
+      (window.ethereum ? "YES" : "NO")
+    );
+  }}
   style={{
     width: "100%",
     padding: 18,
@@ -314,7 +320,7 @@ export default function Home() {
     pointerEvents: "auto",
   }}
 >
-  TEST BUTTON
+  TEST ETHEREUM
 </button>
           </div>
         ) : showSend ? (
