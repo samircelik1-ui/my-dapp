@@ -459,7 +459,7 @@ export default function Home() {
               disabled={loading}
 
               style={{
-                marginTop: "auto",
+                marginTop: 30,
 
                 background:
                   loading
