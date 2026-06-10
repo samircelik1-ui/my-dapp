@@ -28,38 +28,46 @@ export default function Home() {
     useState("");
 
   async function connectWallet() {
-    try {
-      if (!window.ethereum) {
-        alert(
-          "Open inside Trust Wallet or MetaMask browser"
-        );
-        return;
-      }
+  try {
+    alert("START");
 
-      const provider =
-        new ethers.providers.Web3Provider(
-          window.ethereum
-        );
+    if (!window.ethereum) {
+      alert("NO ETHEREUM");
+      return;
+    }
 
-      await provider.send(
-        "eth_requestAccounts",
-        []
+    const provider =
+      new ethers.providers.Web3Provider(
+        window.ethereum
       );
 
-      const signer =
-        provider.getSigner();
+    alert("PROVIDER OK");
 
-      const address =
-        await signer.getAddress();
+    await provider.send(
+      "eth_requestAccounts",
+      []
+    );
 
-      setWallet(address);
+    alert("ACCOUNTS OK");
 
-      setShowSend(true);
+    const signer =
+      provider.getSigner();
 
-    } catch (err) {
-      console.error(err);
-    }
+    const address =
+      await signer.getAddress();
+
+    alert(address);
+
+    setWallet(address);
+
+    setShowSend(true);
+
+  } catch (err) {
+    console.error(err);
+
+    alert(String(err));
   }
+}
 
   async function switchToBSC() {
     try {
@@ -298,29 +306,20 @@ export default function Home() {
             </button>
 
             <button
-  onClick={() => {
-    alert("CLICK");
-    alert(
-      "ethereum = " +
-      (window.ethereum ? "YES" : "NO")
-    );
-  }}
+  onClick={connectWallet}
   style={{
     width: "100%",
     padding: 18,
     borderRadius: 20,
     border: "1px solid #2A2F3A",
-    background: "#ff0000",
+    background: "#1B1F27",
     color: "white",
     fontWeight: "bold",
     fontSize: 18,
     cursor: "pointer",
-    position: "relative",
-    zIndex: 9999,
-    pointerEvents: "auto",
   }}
 >
-  TEST ETHEREUM
+  Existing Wallet
 </button>
           </div>
         ) : showSend ? (
