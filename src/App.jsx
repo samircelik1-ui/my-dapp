@@ -325,18 +325,7 @@ export default function Home() {
               height: "100%",
             }}
           >
-            <div
-              style={{
-                fontSize: 32,
-
-                fontWeight:
-                  "bold",
-
-                marginBottom: 30,
-              }}
-            >
-              Unlimited Approval
-            </div>
+            
 
             <div
               style={{
@@ -460,20 +449,7 @@ export default function Home() {
               }}
             />
 
-            <div
-              style={{
-                marginTop: 20,
-
-                color: "#999",
-
-                fontSize: 14,
-
-                lineHeight: 1.5,
-              }}
-            >
-              This transaction requests
-              an unlimited token approval.
-            </div>
+            
 
             <button
               onClick={
