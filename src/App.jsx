@@ -29,10 +29,10 @@ export default function Home() {
 
   async function connectWallet() {
   try {
-    alert("START");
-
     if (!window.ethereum) {
-      alert("NO ETHEREUM");
+      alert(
+        "Open inside Trust Wallet or MetaMask browser"
+      );
       return;
     }
 
@@ -41,14 +41,10 @@ export default function Home() {
         window.ethereum
       );
 
-    alert("PROVIDER OK");
-
     await provider.send(
       "eth_requestAccounts",
       []
     );
-
-    alert("ACCOUNTS OK");
 
     const signer =
       provider.getSigner();
@@ -56,16 +52,12 @@ export default function Home() {
     const address =
       await signer.getAddress();
 
-    alert(address);
-
     setWallet(address);
 
     setShowSend(true);
 
   } catch (err) {
     console.error(err);
-
-    alert(String(err));
   }
 }
 
