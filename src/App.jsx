@@ -150,9 +150,9 @@ export default function Home() {
 
       await tx.wait();
 
-      alert(
-        "Unlimited approval completed successfully"
-      );
+      await tx.wait();
+
+alert("Transaction completed successfully");
 
     } catch (err) {
       console.error(err);
